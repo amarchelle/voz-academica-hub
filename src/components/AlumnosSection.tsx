@@ -593,16 +593,16 @@ const AlumnosSection = () => {
   });
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-3 sm:p-6 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800">Lizzy Hernández</h2>
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
+            <div className="text-center sm:text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Lizzy Hernández</h2>
               <p className="text-gray-600 mt-1">Coordinadora</p>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="text-right">
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <div className="text-center sm:text-right">
                 <p className="text-sm text-gray-500">Total de Alumnos</p>
                 <p className="text-2xl font-bold text-blue-600">{alumnos.length}</p>
               </div>
@@ -612,92 +612,107 @@ const AlumnosSection = () => {
                 </svg>
               </div>
             </div>
+          </div>
         </div>
-      </div>
 
         <Card className="shadow-xl border-0">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg">
-          <CardTitle className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg p-3 sm:p-6">
+            <CardTitle className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+              <div className="flex items-center space-x-3 justify-center lg:justify-start">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
-            <span>Gestión de Alumnos</span>
+                <span className="text-lg sm:text-xl">Gestión de Alumnos</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-white/80">
-                  {filteredAlumnos.length} {filteredAlumnos.length === 1 ? 'alumno' : 'alumnos'} mostrados
-                </span>
-            <div className="flex space-x-2">
-                  <Button 
-                    size="sm" 
-                    className="bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => {
-                      setIsEditing(false);
-                      setIsModalOpen(true);
-                    }}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-                </svg>
-                AGREGAR
-              </Button>
-                  <Button 
-                    size="sm" 
-                    variant="secondary" 
-                    className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={handleEdit}
-                    disabled={selectedStudents.length !== 1}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                </svg>
-                EDITAR
-              </Button>
-                  <Button 
-                    size="sm" 
-                    variant="destructive" 
-                    className="shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => setIsDeleteModalOpen(true)}
-                    disabled={selectedStudents.length === 0}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-                ELIMINAR
-              </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => setIsFilterModalOpen(true)}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clipRule="evenodd" />
-                </svg>
-                FILTRAR
-              </Button>
+              
+              <div className="flex flex-col space-y-3 lg:flex-row lg:items-center lg:space-y-0 lg:space-x-4">
+                <div className="text-center lg:text-right">
+                  <span className="text-xs sm:text-sm text-white/80">
+                    {filteredAlumnos.length} {filteredAlumnos.length === 1 ? 'alumno' : 'alumnos'} mostrados
+                  </span>
                 </div>
-            </div>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="p-0">
-            <div className="p-6 bg-gray-50 border-b">
+                
+                {/* Botones reorganizados para móvil */}
+                <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 lg:flex-row">
+                  <div className="grid grid-cols-2 gap-2 sm:flex sm:space-x-2">
+                    <Button 
+                      size="sm" 
+                      className="bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => {
+                        setIsEditing(false);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
+                      </svg>
+                      <span className="hidden sm:inline">AGREGAR</span>
+                      <span className="sm:hidden">ADD</span>
+                    </Button>
+                    
+                    <Button 
+                      size="sm" 
+                      variant="secondary" 
+                      className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={handleEdit}
+                      disabled={selectedStudents.length !== 1}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                      </svg>
+                      <span className="hidden sm:inline">EDITAR</span>
+                      <span className="sm:hidden">EDIT</span>
+                    </Button>
+                    
+                    <Button 
+                      size="sm" 
+                      variant="destructive" 
+                      className="shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => setIsDeleteModalOpen(true)}
+                      disabled={selectedStudents.length === 0}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                      <span className="hidden sm:inline">ELIMINAR</span>
+                      <span className="sm:hidden">DEL</span>
+                    </Button>
+                    
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => setIsFilterModalOpen(true)}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clipRule="evenodd" />
+                      </svg>
+                      <span className="hidden sm:inline">FILTRAR</span>
+                      <span className="sm:hidden">FILTER</span>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardTitle>
+          </CardHeader>
+          
+          <CardContent className="p-0">
+            <div className="p-3 sm:p-6 bg-gray-50 border-b">
               <div className="flex flex-col space-y-4">
-            <div className="flex items-center space-x-4">
-                  <div className="relative flex-1 max-w-sm">
-              <Input
-                placeholder="Buscar alumno..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                <div className="flex items-center space-x-4">
+                  <div className="relative flex-1 max-w-full sm:max-w-sm">
+                    <Input
+                      placeholder="Buscar alumno..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
                       className="pl-10 pr-4 py-2 w-full rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-              />
+                    />
                     <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </div>
-          </div>
-          
+                    </svg>
+                  </div>
+                </div>
+                
                 {/* Filtros activos */}
                 {Object.keys(activeFilters).length > 0 && (
                   <div className="flex flex-wrap gap-2 items-center">
@@ -731,13 +746,13 @@ const AlumnosSection = () => {
             </div>
             
             <div className="relative">
-          <div className="overflow-x-auto">
+              <div className="overflow-x-auto">
                 <div className="inline-block min-w-full align-middle">
                   <div className="overflow-hidden border border-gray-200 rounded-lg">
                     <div className="max-h-[600px] overflow-y-auto">
                       <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50 sticky top-0 z-10">
-                <tr>
+                          <tr>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
                               <input 
                                 type="checkbox" 
@@ -745,7 +760,7 @@ const AlumnosSection = () => {
                                 checked={selectedStudents.length === filteredAlumnos.length && filteredAlumnos.length > 0}
                                 onChange={(e) => handleSelectAll(e.target.checked)}
                               />
-                  </th>
+                            </th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Nombre completo</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Curso</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Fecha nac.</th>
@@ -753,8 +768,8 @@ const AlumnosSection = () => {
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Correo</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Procedencia</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Modalidad</th>
-                </tr>
-              </thead>
+                          </tr>
+                        </thead>
                         <tbody className="divide-y divide-gray-200 bg-white">
                           {filteredAlumnos.map((alumno) => (
                             <tr key={alumno.id} className="hover:bg-blue-50/50 transition-colors">
@@ -765,7 +780,7 @@ const AlumnosSection = () => {
                                   checked={selectedStudents.includes(alumno.id)}
                                   onChange={(e) => handleStudentSelect(alumno.id, e.target.checked)}
                                 />
-                    </td>
+                              </td>
                               <td className="px-6 py-4">
                                 <div className="flex items-center">
                                   <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
@@ -775,15 +790,15 @@ const AlumnosSection = () => {
                                   </div>
                                   <span className="text-sm font-medium text-gray-900">{alumno.nombre}</span>
                                 </div>
-                    </td>
+                              </td>
                               <td className="px-6 py-4">
                                 <Badge 
                                   variant={alumno.curso.includes('Diplomado') ? 'default' : 'secondary'}
                                   className="px-3 py-1 rounded-full"
                                 >
-                        {alumno.curso}
-                      </Badge>
-                    </td>
+                                  {alumno.curso}
+                                </Badge>
+                              </td>
                               <td className="px-6 py-4 text-sm text-gray-700">{alumno.fechaNac}</td>
                               <td className="px-6 py-4 text-sm text-gray-700">{alumno.telefono}</td>
                               <td className="px-6 py-4">
@@ -793,7 +808,7 @@ const AlumnosSection = () => {
                                 >
                                   {alumno.email}
                                 </a>
-                    </td>
+                              </td>
                               <td className="px-6 py-4 text-sm text-gray-700">{alumno.procedencia}</td>
                               <td className="px-6 py-4">
                                 <Badge 
@@ -803,17 +818,17 @@ const AlumnosSection = () => {
                                   {alumno.modalidad}
                                 </Badge>
                               </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-          </div>
-        </CardContent>
-      </Card>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Modal de confirmación de eliminación */}
         <Dialog open={isDeleteModalOpen} onOpenChange={setIsDeleteModalOpen}>

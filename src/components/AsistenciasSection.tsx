@@ -396,23 +396,25 @@ const AsistenciasSection = () => {
                         <tr key={alumno.id} className="hover:bg-gray-50">
                           <td className="border p-2">{alumno.nombre}</td>
                           <td className="border p-2 text-center">
-                            {(['S', 'N', 'J'] as const).map((tipo) => (
-                              <Button
-                                key={tipo}
-                                size="sm"
-                                variant="outline"
-                                className={`h-8 px-3 font-bold border-2
-                                  ${alumno.asistencia === tipo ?
-                                    tipo === 'S' ? 'border-green-500 bg-green-100 text-green-700' :
-                                    tipo === 'N' ? 'border-red-500 bg-red-100 text-red-700' :
-                                    'border-yellow-500 bg-yellow-100 text-yellow-700'
-                                  : 'border-gray-300'}
-                                `}
-                                onClick={() => handleAsistenciaChange(alumno.id, tipo)}
-                              >
-                                {tipo}
-                              </Button>
-                            ))}
+                            <div className="flex flex-wrap justify-center gap-2">
+                              {(['S', 'N', 'J'] as const).map((tipo) => (
+                                <Button
+                                  key={tipo}
+                                  size="sm"
+                                  variant="outline"
+                                  className={`h-8 px-3 font-bold border-2
+                                    ${alumno.asistencia === tipo ?
+                                      tipo === 'S' ? 'border-green-500 bg-green-100 text-green-700' :
+                                      tipo === 'N' ? 'border-red-500 bg-red-100 text-red-700' :
+                                      'border-yellow-500 bg-yellow-100 text-yellow-700'
+                                    : 'border-gray-300'}
+                                  `}
+                                  onClick={() => handleAsistenciaChange(alumno.id, tipo)}
+                                >
+                                  {tipo}
+                                </Button>
+                              ))}
+                            </div>
                           </td>
                         </tr>
                       ))}

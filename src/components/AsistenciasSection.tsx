@@ -241,6 +241,13 @@ const AsistenciasSection = () => {
           th { background-color: #f2f2f2; }
           .attendance { text-align: center; }
           .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
+          @media (max-width: 600px) {
+            body { margin: 10px; }
+            .logo { max-width: 100px; }
+            h1 { font-size: 20px; }
+            .details p { font-size: 14px; }
+            th, td { padding: 5px; font-size: 14px; }
+          }
         </style>
       </head>
       <body>
@@ -285,73 +292,73 @@ const AsistenciasSection = () => {
   };
 
   return (
-    <div className="p-4 lg:p-6 bg-[#f8fafc] min-h-screen">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="mb-4">
+    <div className="w-screen min-h-screen bg-[#f8fafc] p-6">
+      <div className="mx-auto">
+        <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800">Control de Asistencias</h2>
-              <p className="text-sm text-gray-600">Registro de asistencia diaria</p>
+              <h2 className="text-3xl font-bold text-gray-800">Control de Asistencias</h2>
+              <p className="text-base text-gray-600">Registro de asistencia diaria</p>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
               <div className="text-right">
-                <p className="text-sm text-gray-500">Fecha</p>
-                <p className="text-xl font-bold text-blue-600">{fecha}</p>
+                <p className="text-base text-gray-500">Fecha</p>
+                <p className="text-2xl font-bold text-blue-600">{fecha}</p>
               </div>
-              <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-blue-600" />
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <Calendar className="w-7 h-7 text-blue-600" />
               </div>
             </div>
           </div>
         </div>
 
         <Card className="shadow-lg border-0">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg py-4">
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg py-6">
             <CardTitle className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <Users className="w-5 h-5" />
-                <span className="text-lg">Clases del día - {diaActual}</span>
+              <div className="flex items-center space-x-4">
+                <Users className="w-6 h-6" />
+                <span className="text-xl">Clases del día - {diaActual}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Input
                   placeholder="Buscar clase o docente..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="max-w-xs text-sm bg-white/10 border-white/20 text-white placeholder:text-white/70"
+                  className="max-w-xs text-base bg-white/10 border-white/20 text-white placeholder:text-white/70"
                 />
               </div>
             </CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
               {filteredClases.map((clase) => (
                 <Card
                   key={clase.id}
-                  className="cursor-pointer hover:shadow-md transition-shadow"
+                  className="cursor-pointer hover:shadow-lg transition-shadow h-full"
                   onClick={() => handleClaseClick(clase)}
                 >
-                  <CardContent className="p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <Badge variant="secondary" className="text-xs">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge variant="secondary" className="text-sm">
                         {clase.curso}
                       </Badge>
-                      <span className="text-sm text-gray-500 flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                      <span className="text-base text-gray-500 flex items-center">
+                        <Clock className="w-5 h-5 mr-1" />
                         {clase.horario}
                       </span>
                     </div>
-                    <h3 className="font-medium text-gray-900 mb-2">{clase.docente}</h3>
-                    <div className="flex items-center justify-between text-sm text-gray-600">
+                    <h3 className="font-semibold text-gray-900 mb-3 text-lg">{clase.docente}</h3>
+                    <div className="flex items-center justify-between text-base text-gray-600 mb-2">
                       <span className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
+                        <MapPin className="w-5 h-5 mr-1" />
                         {clase.aula}
                       </span>
                       <span>{clase.cargo}</span>
                     </div>
-                    <div className="mt-3 pt-3 border-t">
-                      <div className="flex items-center justify-between text-sm">
+                    <div className="mt-4 pt-4 border-t">
+                      <div className="flex items-center justify-between text-base">
                         <span className="text-gray-600">Total alumnos:</span>
-                        <span className="font-medium">{clase.alumnos.length}</span>
+                        <span className="font-semibold">{clase.alumnos.length}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -363,46 +370,46 @@ const AsistenciasSection = () => {
 
         {/* Modal de asistencia */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="sm:max-w-[600px]">
+          <DialogContent className="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8">
             <DialogHeader>
-              <DialogTitle className="text-xl font-bold text-gray-800">
+              <DialogTitle className="text-2xl font-bold text-gray-800">
                 Registrar Asistencia
               </DialogTitle>
             </DialogHeader>
             {selectedClase && (
-              <div className="mt-4">
-                <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-medium text-blue-900">{selectedClase.curso}</h3>
-                    <Badge variant="secondary" className="text-xs">
+              <div className="mt-6">
+                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-semibold text-blue-900 text-lg">{selectedClase.curso}</h3>
+                    <Badge variant="secondary" className="text-sm">
                       {selectedClase.horario}
                     </Badge>
                   </div>
-                  <div className="text-sm text-blue-700">
+                  <div className="text-base text-blue-700">
                     <p>Docente: {selectedClase.docente}</p>
                     <p>Aula: {selectedClase.aula}</p>
                   </div>
                 </div>
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse">
+                  <table className="w-full border-collapse text-base">
                     <thead>
                       <tr className="bg-gray-100">
-                        <th className="border p-2 text-left">Nombre del Alumno</th>
-                        <th className="border p-2 text-center">Asistencia</th>
+                        <th className="border p-3 text-left">Nombre del Alumno</th>
+                        <th className="border p-3 text-center">Asistencia</th>
                       </tr>
                     </thead>
                     <tbody>
                       {selectedClase.alumnos.map((alumno) => (
                         <tr key={alumno.id} className="hover:bg-gray-50">
-                          <td className="border p-2">{alumno.nombre}</td>
-                          <td className="border p-2 text-center">
-                            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 w-full">
+                          <td className="border p-3">{alumno.nombre}</td>
+                          <td className="border p-3 text-center">
+                            <div className="flex flex-wrap justify-center gap-3">
                               {(['S', 'N', 'J'] as const).map((tipo) => (
                                 <Button
                                   key={tipo}
-                                  size="sm"
+                                  size="lg"
                                   variant="outline"
-                                  className={`w-full sm:w-auto h-8 px-3 font-bold border-2
+                                  className={`h-10 px-6 text-lg font-bold border-2
                                     ${alumno.asistencia === tipo ?
                                       tipo === 'S' ? 'border-green-500 bg-green-100 text-green-700' :
                                       tipo === 'N' ? 'border-red-500 bg-red-100 text-red-700' :
@@ -421,23 +428,23 @@ const AsistenciasSection = () => {
                     </tbody>
                   </table>
                 </div>
-                <DialogFooter className="mt-6">
+                <DialogFooter className="mt-8 flex flex-wrap gap-4">
                   <Button
                     variant="outline"
                     onClick={() => setIsModalOpen(false)}
-                    className="border-gray-300 hover:bg-gray-100"
+                    className="border-gray-300 hover:bg-gray-100 text-lg px-6 h-10"
                   >
                     Cancelar
                   </Button>
                   <Button
                     onClick={handleSaveAsistencias}
-                    className="bg-green-500 hover:bg-green-600"
+                    className="bg-green-500 hover:bg-green-600 text-lg px-6 h-10"
                   >
                     Guardar Asistencias
                   </Button>
                   <Button
                     onClick={openPrintWindow}
-                    className="bg-blue-500 hover:bg-blue-600"
+                    className="bg-blue-500 hover:bg-blue-600 text-lg px-6 h-10"
                   >
                     Imprimir lista
                   </Button>

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,106 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Responsive animations and utilities */
+@layer components {
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  .animation-delay-6000 {
+    animation-delay: 6s;
+  }
+  
+  /* Responsive touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Responsive text scaling */
+  .text-responsive {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+  
+  /* Responsive button styling */
+  .btn-responsive {
+    @apply px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3;
+    @apply text-sm sm:text-base;
+    @apply min-h-[40px] sm:min-h-[44px];
+  }
+  
+  /* Responsive card padding */
+  .card-responsive {
+    @apply p-3 sm:p-4 lg:p-6;
+  }
+  
+  /* Safe area for mobile devices */
+  .safe-area-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Enhanced responsive utilities */
+@media (max-width: 640px) {
+  .mobile-full-width {
+    @apply w-full;
+  }
+  
+  .mobile-text-center {
+    @apply text-center;
+  }
+  
+  .mobile-stack {
+    @apply flex-col space-y-2 space-x-0;
+  }
+}
+
+@media (min-width: 768px) {
+  .tablet-flex-row {
+    @apply flex-row space-y-0 space-x-4;
+  }
+}
+
+/* Improved focus states for accessibility */
+@layer utilities {
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .active-scale {
+    @apply active:scale-95;
   }
 }

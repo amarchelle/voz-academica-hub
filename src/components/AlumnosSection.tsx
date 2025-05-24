@@ -219,7 +219,8 @@ const AlumnosSection = () => {
       fechaNac: '20-08-2024',
       telefono: '52 6647443607',
       email: 'sarahly2008@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 2,
@@ -228,7 +229,8 @@ const AlumnosSection = () => {
       fechaNac: '27-07-2004',
       telefono: '52 6622335646',
       email: 'iankarimromero@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 3,
@@ -237,7 +239,8 @@ const AlumnosSection = () => {
       fechaNac: '07-07-2004',
       telefono: '52 6624622545',
       email: 'cristron2014@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 4,
@@ -246,7 +249,8 @@ const AlumnosSection = () => {
       fechaNac: '12-05-2007',
       telefono: '52 6625458796',
       email: 'emmanuelmizq@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 5,
@@ -255,7 +259,8 @@ const AlumnosSection = () => {
       fechaNac: '24-12-2002',
       telefono: '52 6425487965',
       email: 'aaronplayer2@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 6,
@@ -264,7 +269,8 @@ const AlumnosSection = () => {
       fechaNac: '15-03-2003',
       telefono: '52 6621234567',
       email: 'maria.lopez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 7,
@@ -273,7 +279,8 @@ const AlumnosSection = () => {
       fechaNac: '08-09-2005',
       telefono: '52 6629876543',
       email: 'carlos.mendoza@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 8,
@@ -282,7 +289,8 @@ const AlumnosSection = () => {
       fechaNac: '22-11-2004',
       telefono: '52 6624567890',
       email: 'ana.valenzuela@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 9,
@@ -291,7 +299,8 @@ const AlumnosSection = () => {
       fechaNac: '30-01-2006',
       telefono: '52 6623456789',
       email: 'diego.soto@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 10,
@@ -300,7 +309,8 @@ const AlumnosSection = () => {
       fechaNac: '14-07-2003',
       telefono: '52 6622345678',
       email: 'valeria.morales@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 11,
@@ -309,7 +319,8 @@ const AlumnosSection = () => {
       fechaNac: '05-04-2005',
       telefono: '52 6623456789',
       email: 'jose.rios@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 12,
@@ -318,7 +329,8 @@ const AlumnosSection = () => {
       fechaNac: '18-12-2004',
       telefono: '52 6624567890',
       email: 'laura.castro@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 13,
@@ -327,7 +339,8 @@ const AlumnosSection = () => {
       fechaNac: '25-06-2003',
       telefono: '52 6625678901',
       email: 'roberto.navarro@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 14,
@@ -336,7 +349,8 @@ const AlumnosSection = () => {
       fechaNac: '09-02-2005',
       telefono: '52 6626789012',
       email: 'gabriela.torres@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 15,
@@ -345,7 +359,8 @@ const AlumnosSection = () => {
       fechaNac: '12-08-2004',
       telefono: '52 6627890123',
       email: 'miguel.flores@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 16,
@@ -354,7 +369,8 @@ const AlumnosSection = () => {
       fechaNac: '03-05-2003',
       telefono: '52 6628901234',
       email: 'isabella.martinez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 17,
@@ -363,7 +379,8 @@ const AlumnosSection = () => {
       fechaNac: '28-10-2005',
       telefono: '52 6629012345',
       email: 'fernando.herrera@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 18,
@@ -372,7 +389,8 @@ const AlumnosSection = () => {
       fechaNac: '17-01-2004',
       telefono: '52 6620123456',
       email: 'camila.ramirez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 19,
@@ -381,7 +399,8 @@ const AlumnosSection = () => {
       fechaNac: '21-03-2006',
       telefono: '52 6621234567',
       email: 'juan.sanchez@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 20,
@@ -390,7 +409,8 @@ const AlumnosSection = () => {
       fechaNac: '07-09-2003',
       telefono: '52 6622345678',
       email: 'daniela.luna@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 21,
@@ -399,7 +419,8 @@ const AlumnosSection = () => {
       fechaNac: '15-11-2004',
       telefono: '52 6623456789',
       email: 'luis.vega@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 22,
@@ -408,7 +429,8 @@ const AlumnosSection = () => {
       fechaNac: '29-07-2005',
       telefono: '52 6624567890',
       email: 'mariana.ortega@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 23,
@@ -417,7 +439,8 @@ const AlumnosSection = () => {
       fechaNac: '11-04-2003',
       telefono: '52 6625678901',
       email: 'ricardo.diaz@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 24,
@@ -426,7 +449,8 @@ const AlumnosSection = () => {
       fechaNac: '24-12-2004',
       telefono: '52 6626789012',
       email: 'sofia.ruiz@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 25,
@@ -435,7 +459,8 @@ const AlumnosSection = () => {
       fechaNac: '06-02-2005',
       telefono: '52 6627890123',
       email: 'alejandro.torres@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 26,
@@ -444,7 +469,8 @@ const AlumnosSection = () => {
       fechaNac: '19-08-2003',
       telefono: '52 6628901234',
       email: 'valentina.morales@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 27,
@@ -453,7 +479,8 @@ const AlumnosSection = () => {
       fechaNac: '02-05-2004',
       telefono: '52 6629012345',
       email: 'emilio.rios@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 28,
@@ -462,7 +489,8 @@ const AlumnosSection = () => {
       fechaNac: '13-10-2005',
       telefono: '52 6620123456',
       email: 'renata.castro@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 29,
@@ -471,7 +499,8 @@ const AlumnosSection = () => {
       fechaNac: '26-01-2004',
       telefono: '52 6621234567',
       email: 'sebastian.navarro@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 30,
@@ -480,7 +509,8 @@ const AlumnosSection = () => {
       fechaNac: '09-03-2006',
       telefono: '52 6622345678',
       email: 'regina.flores@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 31,
@@ -489,7 +519,8 @@ const AlumnosSection = () => {
       fechaNac: '22-09-2003',
       telefono: '52 6623456789',
       email: 'adrian.martinez@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 32,
@@ -498,7 +529,8 @@ const AlumnosSection = () => {
       fechaNac: '05-11-2004',
       telefono: '52 6624567890',
       email: 'natalia.herrera@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 33,
@@ -507,7 +539,8 @@ const AlumnosSection = () => {
       fechaNac: '18-07-2005',
       telefono: '52 6625678901',
       email: 'diego.ramirez@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 34,
@@ -516,7 +549,8 @@ const AlumnosSection = () => {
       fechaNac: '01-04-2003',
       telefono: '52 6626789012',
       email: 'maria.sanchez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 35,
@@ -525,24 +559,28 @@ const AlumnosSection = () => {
       fechaNac: '14-12-2004',
       telefono: '52 6627890123',
       email: 'carlos.luna@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     }
   ];
 
   const filteredAlumnos = alumnos.filter(alumno => {
-    // Si no hay filtros activos, mostrar todos los alumnos
+    const matchesSearch = searchTerm === '' || 
+      alumno.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      alumno.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      alumno.curso.toLowerCase().includes(searchTerm.toLowerCase());
+
+    // Si no hay filtros activos, solo aplicar búsqueda
     if (Object.keys(activeFilters).length === 0) {
-      return true;
+      return matchesSearch;
     }
 
-    // Aplicar filtros
-    return Object.entries(activeFilters).every(([key, value]) => {
+    // Aplicar filtros y búsqueda
+    const matchesFilters = Object.entries(activeFilters).every(([key, value]) => {
       switch (key) {
         case 'curso':
           return alumno.curso === value;
         case 'modalidad':
-          // Aquí asumimos que la modalidad está en los datos del alumno
-          // Si no está, necesitarías agregar este campo a los datos
           return alumno.modalidad === value;
         case 'procedencia':
           return alumno.procedencia === value;
@@ -550,19 +588,21 @@ const AlumnosSection = () => {
           return true;
       }
     });
+
+    return matchesSearch && matchesFilters;
   });
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-3 sm:p-6 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800">Lizzy Hernández</h2>
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
+            <div className="text-center sm:text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Lizzy Hernández</h2>
               <p className="text-gray-600 mt-1">Coordinadora</p>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="text-right">
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <div className="text-center sm:text-right">
                 <p className="text-sm text-gray-500">Total de Alumnos</p>
                 <p className="text-2xl font-bold text-blue-600">{alumnos.length}</p>
               </div>
@@ -572,87 +612,102 @@ const AlumnosSection = () => {
                 </svg>
               </div>
             </div>
+          </div>
         </div>
-      </div>
 
         <Card className="shadow-xl border-0">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg">
-          <CardTitle className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg p-3 sm:p-6">
+            <CardTitle className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+              <div className="flex items-center space-x-3 justify-center lg:justify-start">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
-            <span>Gestión de Alumnos</span>
+                <span className="text-lg sm:text-xl">Gestión de Alumnos</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-white/80">
-                  {filteredAlumnos.length} {filteredAlumnos.length === 1 ? 'alumno' : 'alumnos'} mostrados
-                </span>
-            <div className="flex space-x-2">
-                  <Button 
-                    size="sm" 
-                    className="bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => {
-                      setIsEditing(false);
-                      setIsModalOpen(true);
-                    }}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              
+              <div className="flex flex-col space-y-3 lg:flex-row lg:items-center lg:space-y-0 lg:space-x-4">
+                <div className="text-center lg:text-right">
+                  <span className="text-xs sm:text-sm text-white/80">
+                    {filteredAlumnos.length} {filteredAlumnos.length === 1 ? 'alumno' : 'alumnos'} mostrados
+                  </span>
+      </div>
+
+                {/* Botones reorganizados para móvil */}
+                <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 lg:flex-row">
+                  <div className="grid grid-cols-2 gap-2 sm:flex sm:space-x-2">
+                    <Button 
+                      size="sm" 
+                      className="bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => {
+                        setIsEditing(false);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
                 </svg>
-                AGREGAR
+                      <span className="hidden sm:inline">AGREGAR</span>
+                      <span className="sm:hidden">AGREGAR</span>
               </Button>
-                  <Button 
-                    size="sm" 
-                    variant="secondary" 
-                    className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={handleEdit}
-                    disabled={selectedStudents.length !== 1}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    
+                    <Button 
+                      size="sm" 
+                      variant="secondary" 
+                      className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={handleEdit}
+                      disabled={selectedStudents.length !== 1}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                 </svg>
-                EDITAR
+                      <span className="hidden sm:inline">EDITAR</span>
+                      <span className="sm:hidden">EDITAR</span>
               </Button>
-                  <Button 
-                    size="sm" 
-                    variant="destructive" 
-                    className="shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => setIsDeleteModalOpen(true)}
-                    disabled={selectedStudents.length === 0}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    
+                    <Button 
+                      size="sm" 
+                      variant="destructive" 
+                      className="shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => setIsDeleteModalOpen(true)}
+                      disabled={selectedStudents.length === 0}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
                 </svg>
-                ELIMINAR
+                      <span className="hidden sm:inline">ELIMINAR</span>
+                      <span className="sm:hidden">ELIMINAR</span>
               </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200"
-                    onClick={() => setIsFilterModalOpen(true)}
-                  >
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="bg-white/20 hover:bg-white/30 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[40px] touch-target"
+                      onClick={() => setIsFilterModalOpen(true)}
+                    >
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clipRule="evenodd" />
                 </svg>
-                FILTRAR
+                      <span className="hidden sm:inline">FILTRAR</span>
+                      <span className="sm:hidden">FILTRAR</span>
               </Button>
+                  </div>
                 </div>
             </div>
           </CardTitle>
         </CardHeader>
+          
         <CardContent className="p-0">
-            <div className="p-6 bg-gray-50 border-b">
+            <div className="p-3 sm:p-6 bg-gray-50 border-b">
               <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-4">
-                  <div className="relative flex-1 max-w-sm">
+                  <div className="relative flex-1 max-w-full sm:max-w-sm">
               <Input
                 placeholder="Buscar alumno..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                       className="pl-10 pr-4 py-2 w-full rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500"
               />
-                    <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 20 20">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
             </div>
@@ -697,12 +752,12 @@ const AlumnosSection = () => {
                     <div className="max-h-[600px] overflow-y-auto">
                       <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50 sticky top-0 z-10">
-                <tr>
+                          <tr>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
                               <input 
                                 type="checkbox" 
                                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                                checked={selectedStudents.length === filteredAlumnos.length}
+                                checked={selectedStudents.length === filteredAlumnos.length && filteredAlumnos.length > 0}
                                 onChange={(e) => handleSelectAll(e.target.checked)}
                               />
                   </th>
@@ -712,6 +767,7 @@ const AlumnosSection = () => {
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Teléfono</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Correo</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Procedencia</th>
+                            <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Modalidad</th>
                 </tr>
               </thead>
                         <tbody className="divide-y divide-gray-200 bg-white">
@@ -752,8 +808,16 @@ const AlumnosSection = () => {
                                 >
                                   {alumno.email}
                                 </a>
-                    </td>
+                              </td>
                               <td className="px-6 py-4 text-sm text-gray-700">{alumno.procedencia}</td>
+                              <td className="px-6 py-4">
+                                <Badge 
+                                  variant={alumno.modalidad === 'presencial' ? 'default' : 'outline'}
+                                  className="px-3 py-1 rounded-full capitalize"
+                                >
+                                  {alumno.modalidad}
+                                </Badge>
+                    </td>
                   </tr>
                 ))}
               </tbody>

@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogD
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { X } from 'lucide-react';
+import { Calendar, Users, MapPin, Clock } from 'lucide-react';
 
 const MensualidadesSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,6 +32,9 @@ const MensualidadesSection = () => {
     alumno: '',
     mes: ''
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMensualidad, setSelectedMensualidad] = useState(null);
+  const [fecha, setFecha] = useState('');
   
   const mensualidades = [
     {
@@ -46,7 +50,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 1',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 1, nombre: 'Inscripción', estado: 'S' },
+        { id: 2, nombre: 'Mensualidad', estado: 'S' },
+        { id: 3, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 2,
@@ -61,7 +74,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 2',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 4, nombre: 'Inscripción', estado: 'S' },
+        { id: 5, nombre: 'Mensualidad', estado: 'S' },
+        { id: 6, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 3,
@@ -76,7 +98,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 3',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 7, nombre: 'Inscripción', estado: 'N' },
+        { id: 8, nombre: 'Mensualidad', estado: 'N' },
+        { id: 9, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 4,
@@ -91,7 +122,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 4',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 10, nombre: 'Inscripción', estado: 'N' },
+        { id: 11, nombre: 'Mensualidad', estado: 'N' },
+        { id: 12, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 5,
@@ -106,7 +146,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 5',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 13, nombre: 'Inscripción', estado: 'S' },
+        { id: 14, nombre: 'Mensualidad', estado: 'S' },
+        { id: 15, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 6,
@@ -121,7 +170,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 6',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 16, nombre: 'Inscripción', estado: 'N' },
+        { id: 17, nombre: 'Mensualidad', estado: 'N' },
+        { id: 18, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 7,
@@ -136,7 +194,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 7',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 19, nombre: 'Inscripción', estado: 'S' },
+        { id: 20, nombre: 'Mensualidad', estado: 'S' },
+        { id: 21, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 8,
@@ -151,7 +218,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 8',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 22, nombre: 'Inscripción', estado: 'S' },
+        { id: 23, nombre: 'Mensualidad', estado: 'S' },
+        { id: 24, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 9,
@@ -166,7 +242,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 9',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 25, nombre: 'Inscripción', estado: 'N' },
+        { id: 26, nombre: 'Mensualidad', estado: 'N' },
+        { id: 27, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 10,
@@ -181,7 +266,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 10',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 28, nombre: 'Inscripción', estado: 'S' },
+        { id: 29, nombre: 'Mensualidad', estado: 'S' },
+        { id: 30, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 11,
@@ -196,7 +290,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 11',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 31, nombre: 'Inscripción', estado: 'S' },
+        { id: 32, nombre: 'Mensualidad', estado: 'S' },
+        { id: 33, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 12,
@@ -211,7 +314,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 12',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 34, nombre: 'Inscripción', estado: 'N' },
+        { id: 35, nombre: 'Mensualidad', estado: 'N' },
+        { id: 36, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 13,
@@ -226,7 +338,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 13',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 37, nombre: 'Inscripción', estado: 'S' },
+        { id: 38, nombre: 'Mensualidad', estado: 'S' },
+        { id: 39, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 14,
@@ -241,7 +362,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 14',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 40, nombre: 'Inscripción', estado: 'S' },
+        { id: 41, nombre: 'Mensualidad', estado: 'S' },
+        { id: 42, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 15,
@@ -256,7 +386,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 15',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 43, nombre: 'Inscripción', estado: 'N' },
+        { id: 44, nombre: 'Mensualidad', estado: 'N' },
+        { id: 45, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 16,
@@ -271,7 +410,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 16',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 46, nombre: 'Inscripción', estado: 'S' },
+        { id: 47, nombre: 'Mensualidad', estado: 'S' },
+        { id: 48, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 17,
@@ -286,7 +434,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 17',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 49, nombre: 'Inscripción', estado: 'S' },
+        { id: 50, nombre: 'Mensualidad', estado: 'S' },
+        { id: 51, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 18,
@@ -301,7 +458,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 18',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 52, nombre: 'Inscripción', estado: 'N' },
+        { id: 53, nombre: 'Mensualidad', estado: 'N' },
+        { id: 54, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 19,
@@ -316,7 +482,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 19',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 55, nombre: 'Inscripción', estado: 'S' },
+        { id: 56, nombre: 'Mensualidad', estado: 'S' },
+        { id: 57, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 20,
@@ -331,7 +506,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 20',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 58, nombre: 'Inscripción', estado: 'S' },
+        { id: 59, nombre: 'Mensualidad', estado: 'S' },
+        { id: 60, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 21,
@@ -346,7 +530,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 21',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 61, nombre: 'Inscripción', estado: 'N' },
+        { id: 62, nombre: 'Mensualidad', estado: 'N' },
+        { id: 63, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 22,
@@ -361,7 +554,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 22',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 64, nombre: 'Inscripción', estado: 'S' },
+        { id: 65, nombre: 'Mensualidad', estado: 'S' },
+        { id: 66, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 23,
@@ -376,7 +578,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 23',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 67, nombre: 'Inscripción', estado: 'S' },
+        { id: 68, nombre: 'Mensualidad', estado: 'S' },
+        { id: 69, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 24,
@@ -391,7 +602,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 24',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 70, nombre: 'Inscripción', estado: 'N' },
+        { id: 71, nombre: 'Mensualidad', estado: 'N' },
+        { id: 72, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 25,
@@ -406,7 +626,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 25',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 73, nombre: 'Inscripción', estado: 'S' },
+        { id: 74, nombre: 'Mensualidad', estado: 'S' },
+        { id: 75, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 26,
@@ -421,7 +650,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 26',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 76, nombre: 'Inscripción', estado: 'N' },
+        { id: 77, nombre: 'Mensualidad', estado: 'N' },
+        { id: 78, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 27,
@@ -436,7 +674,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 27',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 79, nombre: 'Inscripción', estado: 'S' },
+        { id: 80, nombre: 'Mensualidad', estado: 'S' },
+        { id: 81, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 28,
@@ -451,7 +698,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 28',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 82, nombre: 'Inscripción', estado: 'S' },
+        { id: 83, nombre: 'Mensualidad', estado: 'S' },
+        { id: 84, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 29,
@@ -466,7 +722,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 29',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 85, nombre: 'Inscripción', estado: 'N' },
+        { id: 86, nombre: 'Mensualidad', estado: 'N' },
+        { id: 87, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 30,
@@ -481,7 +746,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 30',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 88, nombre: 'Inscripción', estado: 'S' },
+        { id: 89, nombre: 'Mensualidad', estado: 'S' },
+        { id: 90, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 31,
@@ -496,7 +770,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 31',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 91, nombre: 'Inscripción', estado: 'N' },
+        { id: 92, nombre: 'Mensualidad', estado: 'N' },
+        { id: 93, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 32,
@@ -511,7 +794,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$1000',
+      aula: 'Aula 32',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 94, nombre: 'Inscripción', estado: 'S' },
+        { id: 95, nombre: 'Mensualidad', estado: 'S' },
+        { id: 96, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 33,
@@ -526,7 +818,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 33',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 97, nombre: 'Inscripción', estado: 'S' },
+        { id: 98, nombre: 'Mensualidad', estado: 'S' },
+        { id: 99, nombre: 'Material', estado: 'S' }
+      ]
     },
     {
       id: 34,
@@ -541,7 +842,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$0',
+      aula: 'Aula 34',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 100, nombre: 'Inscripción', estado: 'N' },
+        { id: 101, nombre: 'Mensualidad', estado: 'N' },
+        { id: 102, nombre: 'Material', estado: 'N' }
+      ]
     },
     {
       id: 35,
@@ -556,7 +866,16 @@ const MensualidadesSection = () => {
         DIC: null,
         ENE: null,
         FEB: null
-      }
+      },
+      fecha: '15/08/2024',
+      totalPagado: '$900',
+      aula: 'Aula 35',
+      cargo: 'Estudiante',
+      conceptos: [
+        { id: 103, nombre: 'Inscripción', estado: 'S' },
+        { id: 104, nombre: 'Mensualidad', estado: 'S' },
+        { id: 105, nombre: 'Material', estado: 'S' }
+      ]
     }
   ];
 
@@ -693,41 +1012,65 @@ const MensualidadesSection = () => {
     });
   });
 
+  const handleMensualidadClick = (mensualidad) => {
+    setSelectedMensualidad(mensualidad);
+    setIsModalOpen(true);
+  };
+
+  const handleSaveMensualidad = () => {
+    // Aquí iría la lógica para guardar la mensualidad
+    console.log('Guardando mensualidad:', selectedMensualidad);
+    setIsModalOpen(false);
+    setSelectedMensualidad(null);
+  };
+
+  const openPrintWindow = () => {
+    // Aquí iría la lógica para abrir la ventana de impresión
+    console.log('Imprimiendo lista de mensualidades');
+  };
+
+  const handleEstadoChange = (conceptoId, estado) => {
+    // Placeholder function, might be removed or repurposed
+    console.log(`Concepto ${conceptoId} estado cambiado a ${estado} (placeholder)`);
+  };
+
   return (
-    <div className="p-4 lg:p-6 bg-[#f8fafc] min-h-screen">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="mb-4">
+    <div className="p-4 lg:p-6 bg-[#f8fafc] min-h-screen w-full">
+      <div className="max-w-full mx-auto">
+        <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-          <h2 className="text-2xl font-bold text-gray-800">Lizzy Hernández</h2>
-              <p className="text-sm text-gray-600">Coordinadora</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="text-right">
-                <p className="text-sm text-gray-500">Total de Pagos</p>
-                <p className="text-xl font-bold text-blue-600">0</p>
-              </div>
-              <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-            </div>
+              <h2 className="text-3xl font-bold text-gray-800">Gestión de Mensualidades</h2>
+              <p className="text-base text-gray-600">Registro y control de pagos mensuales</p>
         </div>
+            <div className="flex items-center space-x-6">
+              <div className="text-right">
+                <p className="text-base text-gray-500">Fecha</p>
+                <p className="text-2xl font-bold text-blue-600">{fecha}</p>
+              </div>
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <Calendar className="w-7 h-7 text-blue-600" />
+              </div>
+            </div>
+          </div>
       </div>
 
         <Card className="shadow-lg border-0">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg py-4">
-          <CardTitle className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-lg">Control de Mensualidades</span>
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-t-lg py-4 md:py-6">
+            <CardTitle className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-2">
+              <div className="flex items-center space-x-3 md:space-x-4">
+                <Users className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="text-lg md:text-xl">Control de Mensualidades</span>
               </div>
-            <div className="flex space-x-2">
-                <Button 
-                  size="sm" 
+              <div className="flex flex-wrap gap-2 justify-end w-full sm:w-auto">
+                <Input
+                  placeholder="Buscar alumno..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="max-w-full sm:max-w-xs text-sm md:text-base"
+                />
+                 <Button
+                  size="sm"
                   className="bg-green-700 hover:bg-green-800 text-sm"
                   onClick={handleRegisterPayment}
                   disabled={selectedStudents.length !== 1}
@@ -737,8 +1080,8 @@ const MensualidadesSection = () => {
                 </svg>
                 REGISTRAR
               </Button>
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   variant="secondary"
                   className="text-sm"
                   onClick={handleEdit}
@@ -749,9 +1092,9 @@ const MensualidadesSection = () => {
                 </svg>
                 EDITAR
               </Button>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
+                <Button
+                  size="sm"
+                  variant="outline"
                   className="text-green-600 border-green-600 text-sm"
                   onClick={() => setIsFilterModalOpen(true)}
                 >
@@ -766,26 +1109,12 @@ const MensualidadesSection = () => {
         <CardContent className="p-0">
             <div className="p-3 bg-gray-50 border-b">
               <div className="flex flex-col space-y-3">
-                <div className="flex items-center space-x-3">
-              <Input
-                placeholder="Buscar alumno..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                    className="max-w-sm text-sm"
-              />
-              <Button size="sm" className="bg-green-600 hover:bg-green-700">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                </svg>
-              </Button>
-                </div>
-                
                 {/* Filtros activos */}
                 {Object.keys(activeFilters).length > 0 && (
                   <div className="flex flex-wrap gap-2 items-center">
                     <span className="text-xs text-gray-600">Filtros activos:</span>
                     {Object.entries(activeFilters).map(([key, value]) => (
-                      <Badge 
+                      <Badge
                         key={key}
                         variant="secondary"
                         className="flex items-center gap-1 px-2 py-0.5 text-xs"
@@ -817,7 +1146,7 @@ const MensualidadesSection = () => {
                       className="text-xs text-gray-600 hover:text-gray-900"
                     >
                       Limpiar todos
-                    </Button>
+              </Button>
                   </div>
                 )}
             </div>
@@ -828,12 +1157,12 @@ const MensualidadesSection = () => {
                 <div className="max-h-[500px] overflow-y-auto">
             <table className="w-full">
                     <thead className="bg-blue-50 sticky top-0 z-10">
-                <tr>
+                      <tr>
                         <th className="px-3 py-2 text-left text-xs font-medium text-gray-700">
-                          <input 
-                            type="checkbox" 
+                          <input
+                            type="checkbox"
                             className="rounded"
-                            checked={selectedStudents.length === mensualidades.length}
+                            checked={selectedStudents.length === filteredMensualidades.length && filteredMensualidades.length > 0}
                             onChange={(e) => handleSelectAll(e.target.checked)}
                           />
                   </th>
@@ -849,8 +1178,8 @@ const MensualidadesSection = () => {
                       {filteredMensualidades.map((item) => (
                   <tr key={item.id} className="hover:bg-blue-50 transition-colors">
                           <td className="px-3 py-2">
-                            <input 
-                              type="checkbox" 
+                            <input
+                              type="checkbox"
                               className="rounded"
                               checked={selectedStudents.includes(item.id)}
                               onChange={(e) => handleStudentSelect(item.id, e.target.checked)}
@@ -894,7 +1223,7 @@ const MensualidadesSection = () => {
 
         {/* Modal de registro/edición de pago */}
         <Dialog open={isPaymentModalOpen} onOpenChange={setIsPaymentModalOpen}>
-          <DialogContent className="sm:max-w-[600px]">
+          <DialogContent className="sm:max-w-[600px] p-6">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-gray-800">
                 {isEditing ? 'Editar Pago' : 'Registrar Pago'}
@@ -904,7 +1233,7 @@ const MensualidadesSection = () => {
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-6 py-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="fecha">Fecha de pago</Label>
                   <Input
@@ -925,7 +1254,7 @@ const MensualidadesSection = () => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="concepto">Concepto</Label>
                   <Select
@@ -989,7 +1318,7 @@ const MensualidadesSection = () => {
                 />
               </div>
             </div>
-            <DialogFooter className="flex justify-between">
+            <DialogFooter className="flex flex-col sm:flex-row justify-between gap-4">
               <Button
                 variant="outline"
                 onClick={() => {
@@ -1023,7 +1352,7 @@ const MensualidadesSection = () => {
         <Dialog open={isFilterModalOpen} onOpenChange={setIsFilterModalOpen}>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-gray-800">Filtrar Alumnos</DialogTitle>
+              <DialogTitle className="text-2xl font-bold text-gray-800">Filtrar Mensualidades</DialogTitle>
               <DialogDescription className="text-gray-600 mt-2">
                 Seleccione los criterios de filtrado para los pagos
               </DialogDescription>
@@ -1063,7 +1392,7 @@ const MensualidadesSection = () => {
                 </Select>
               </div>
             </div>
-            <DialogFooter className="flex justify-between">
+            <DialogFooter className="flex flex-col sm:flex-row justify-between gap-4">
               <Button
                 variant="outline"
                 onClick={clearAllFilters}
@@ -1087,6 +1416,92 @@ const MensualidadesSection = () => {
                 </Button>
               </div>
             </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        {/* Modal de mensualidad */}
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent className="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-gray-800">
+                Registrar Mensualidad
+              </DialogTitle>
+            </DialogHeader>
+            {selectedMensualidad && (
+              <div className="mt-6">
+                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-semibold text-blue-900 text-lg">{selectedMensualidad.curso}</h3>
+                    <Badge variant="secondary" className="text-sm">
+                      {selectedMensualidad.fecha}
+                    </Badge>
+                  </div>
+                  <div className="text-base text-blue-700">
+                    <p>Alumno: {selectedMensualidad.nombre}</p>
+                    <p>Aula: {selectedMensualidad.aula}</p>
+                  </div>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse text-base">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border p-3 text-left">Concepto</th>
+                        <th className="border p-3 text-center">Monto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {selectedMensualidad.conceptos.map((concepto) => (
+                        <tr key={concepto.id} className="hover:bg-gray-50">
+                          <td className="border p-3">{concepto.nombre}</td>
+                          <td className="border p-3 text-center">
+                            <div className="flex flex-wrap justify-center gap-3">
+                              {(['S', 'N', 'J'] as const).map((tipo) => (
+                                <Button
+                                  key={tipo}
+                                  size="lg"
+                                  variant="outline"
+                                  className={`h-10 px-6 text-lg font-bold border-2
+                                    ${concepto.estado === tipo ?
+                                      tipo === 'S' ? 'border-green-500 bg-green-100 text-green-700' :
+                                      tipo === 'N' ? 'border-red-500 bg-red-100 text-red-700' :
+                                      'border-yellow-500 bg-yellow-100 text-yellow-700'
+                                    : 'border-gray-300'}
+                                  `}
+                                  onClick={() => handleEstadoChange(concepto.id, tipo)}
+                                >
+                                  {tipo}
+                                </Button>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <DialogFooter className="mt-8 flex flex-wrap gap-4">
+                  <Button
+                    variant="outline"
+                    onClick={() => setIsModalOpen(false)}
+                    className="border-gray-300 hover:bg-gray-100 text-lg px-6 h-10"
+                  >
+                    Cancelar
+                  </Button>
+                  <Button
+                    onClick={handleSaveMensualidad}
+                    className="bg-green-500 hover:bg-green-600 text-lg px-6 h-10"
+                  >
+                    Guardar Mensualidad
+                  </Button>
+                  <Button
+                    onClick={openPrintWindow}
+                    className="bg-blue-500 hover:bg-blue-600 text-lg px-6 h-10"
+                  >
+                    Imprimir lista
+                  </Button>
+                </DialogFooter>
+              </div>
+            )}
           </DialogContent>
         </Dialog>
       </div>

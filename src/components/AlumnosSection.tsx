@@ -219,7 +219,8 @@ const AlumnosSection = () => {
       fechaNac: '20-08-2024',
       telefono: '52 6647443607',
       email: 'sarahly2008@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 2,
@@ -228,7 +229,8 @@ const AlumnosSection = () => {
       fechaNac: '27-07-2004',
       telefono: '52 6622335646',
       email: 'iankarimromero@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 3,
@@ -237,7 +239,8 @@ const AlumnosSection = () => {
       fechaNac: '07-07-2004',
       telefono: '52 6624622545',
       email: 'cristron2014@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 4,
@@ -246,7 +249,8 @@ const AlumnosSection = () => {
       fechaNac: '12-05-2007',
       telefono: '52 6625458796',
       email: 'emmanuelmizq@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 5,
@@ -255,7 +259,8 @@ const AlumnosSection = () => {
       fechaNac: '24-12-2002',
       telefono: '52 6425487965',
       email: 'aaronplayer2@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 6,
@@ -264,7 +269,8 @@ const AlumnosSection = () => {
       fechaNac: '15-03-2003',
       telefono: '52 6621234567',
       email: 'maria.lopez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 7,
@@ -273,7 +279,8 @@ const AlumnosSection = () => {
       fechaNac: '08-09-2005',
       telefono: '52 6629876543',
       email: 'carlos.mendoza@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 8,
@@ -282,7 +289,8 @@ const AlumnosSection = () => {
       fechaNac: '22-11-2004',
       telefono: '52 6624567890',
       email: 'ana.valenzuela@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 9,
@@ -291,7 +299,8 @@ const AlumnosSection = () => {
       fechaNac: '30-01-2006',
       telefono: '52 6623456789',
       email: 'diego.soto@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 10,
@@ -300,7 +309,8 @@ const AlumnosSection = () => {
       fechaNac: '14-07-2003',
       telefono: '52 6622345678',
       email: 'valeria.morales@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 11,
@@ -309,7 +319,8 @@ const AlumnosSection = () => {
       fechaNac: '05-04-2005',
       telefono: '52 6623456789',
       email: 'jose.rios@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 12,
@@ -318,7 +329,8 @@ const AlumnosSection = () => {
       fechaNac: '18-12-2004',
       telefono: '52 6624567890',
       email: 'laura.castro@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 13,
@@ -327,7 +339,8 @@ const AlumnosSection = () => {
       fechaNac: '25-06-2003',
       telefono: '52 6625678901',
       email: 'roberto.navarro@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 14,
@@ -336,7 +349,8 @@ const AlumnosSection = () => {
       fechaNac: '09-02-2005',
       telefono: '52 6626789012',
       email: 'gabriela.torres@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 15,
@@ -345,7 +359,8 @@ const AlumnosSection = () => {
       fechaNac: '12-08-2004',
       telefono: '52 6627890123',
       email: 'miguel.flores@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 16,
@@ -354,7 +369,8 @@ const AlumnosSection = () => {
       fechaNac: '03-05-2003',
       telefono: '52 6628901234',
       email: 'isabella.martinez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 17,
@@ -363,7 +379,8 @@ const AlumnosSection = () => {
       fechaNac: '28-10-2005',
       telefono: '52 6629012345',
       email: 'fernando.herrera@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 18,
@@ -372,7 +389,8 @@ const AlumnosSection = () => {
       fechaNac: '17-01-2004',
       telefono: '52 6620123456',
       email: 'camila.ramirez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 19,
@@ -381,7 +399,8 @@ const AlumnosSection = () => {
       fechaNac: '21-03-2006',
       telefono: '52 6621234567',
       email: 'juan.sanchez@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 20,
@@ -390,7 +409,8 @@ const AlumnosSection = () => {
       fechaNac: '07-09-2003',
       telefono: '52 6622345678',
       email: 'daniela.luna@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 21,
@@ -399,7 +419,8 @@ const AlumnosSection = () => {
       fechaNac: '15-11-2004',
       telefono: '52 6623456789',
       email: 'luis.vega@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 22,
@@ -408,7 +429,8 @@ const AlumnosSection = () => {
       fechaNac: '29-07-2005',
       telefono: '52 6624567890',
       email: 'mariana.ortega@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 23,
@@ -417,7 +439,8 @@ const AlumnosSection = () => {
       fechaNac: '11-04-2003',
       telefono: '52 6625678901',
       email: 'ricardo.diaz@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 24,
@@ -426,7 +449,8 @@ const AlumnosSection = () => {
       fechaNac: '24-12-2004',
       telefono: '52 6626789012',
       email: 'sofia.ruiz@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 25,
@@ -435,7 +459,8 @@ const AlumnosSection = () => {
       fechaNac: '06-02-2005',
       telefono: '52 6627890123',
       email: 'alejandro.torres@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 26,
@@ -444,7 +469,8 @@ const AlumnosSection = () => {
       fechaNac: '19-08-2003',
       telefono: '52 6628901234',
       email: 'valentina.morales@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 27,
@@ -453,7 +479,8 @@ const AlumnosSection = () => {
       fechaNac: '02-05-2004',
       telefono: '52 6629012345',
       email: 'emilio.rios@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 28,
@@ -462,7 +489,8 @@ const AlumnosSection = () => {
       fechaNac: '13-10-2005',
       telefono: '52 6620123456',
       email: 'renata.castro@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 29,
@@ -471,7 +499,8 @@ const AlumnosSection = () => {
       fechaNac: '26-01-2004',
       telefono: '52 6621234567',
       email: 'sebastian.navarro@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 30,
@@ -480,7 +509,8 @@ const AlumnosSection = () => {
       fechaNac: '09-03-2006',
       telefono: '52 6622345678',
       email: 'regina.flores@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 31,
@@ -489,7 +519,8 @@ const AlumnosSection = () => {
       fechaNac: '22-09-2003',
       telefono: '52 6623456789',
       email: 'adrian.martinez@gmail.com',
-      procedencia: 'Guaymas, Son. MX'
+      procedencia: 'Guaymas, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 32,
@@ -498,7 +529,8 @@ const AlumnosSection = () => {
       fechaNac: '05-11-2004',
       telefono: '52 6624567890',
       email: 'natalia.herrera@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 33,
@@ -507,7 +539,8 @@ const AlumnosSection = () => {
       fechaNac: '18-07-2005',
       telefono: '52 6625678901',
       email: 'diego.ramirez@gmail.com',
-      procedencia: 'Ciudad Obregón, Son. MX'
+      procedencia: 'Ciudad Obregón, Son. MX',
+      modalidad: 'virtual'
     },
     {
       id: 34,
@@ -516,7 +549,8 @@ const AlumnosSection = () => {
       fechaNac: '01-04-2003',
       telefono: '52 6626789012',
       email: 'maria.sanchez@gmail.com',
-      procedencia: 'Hermosillo, Son. MX'
+      procedencia: 'Hermosillo, Son. MX',
+      modalidad: 'presencial'
     },
     {
       id: 35,
@@ -525,24 +559,28 @@ const AlumnosSection = () => {
       fechaNac: '14-12-2004',
       telefono: '52 6627890123',
       email: 'carlos.luna@gmail.com',
-      procedencia: 'Navojoa, Son. MX'
+      procedencia: 'Navojoa, Son. MX',
+      modalidad: 'presencial'
     }
   ];
 
   const filteredAlumnos = alumnos.filter(alumno => {
-    // Si no hay filtros activos, mostrar todos los alumnos
+    const matchesSearch = searchTerm === '' || 
+      alumno.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      alumno.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      alumno.curso.toLowerCase().includes(searchTerm.toLowerCase());
+
+    // Si no hay filtros activos, solo aplicar búsqueda
     if (Object.keys(activeFilters).length === 0) {
-      return true;
+      return matchesSearch;
     }
 
-    // Aplicar filtros
-    return Object.entries(activeFilters).every(([key, value]) => {
+    // Aplicar filtros y búsqueda
+    const matchesFilters = Object.entries(activeFilters).every(([key, value]) => {
       switch (key) {
         case 'curso':
           return alumno.curso === value;
         case 'modalidad':
-          // Aquí asumimos que la modalidad está en los datos del alumno
-          // Si no está, necesitarías agregar este campo a los datos
           return alumno.modalidad === value;
         case 'procedencia':
           return alumno.procedencia === value;
@@ -550,6 +588,8 @@ const AlumnosSection = () => {
           return true;
       }
     });
+
+    return matchesSearch && matchesFilters;
   });
 
   return (
@@ -702,7 +742,7 @@ const AlumnosSection = () => {
                               <input 
                                 type="checkbox" 
                                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                                checked={selectedStudents.length === filteredAlumnos.length}
+                                checked={selectedStudents.length === filteredAlumnos.length && filteredAlumnos.length > 0}
                                 onChange={(e) => handleSelectAll(e.target.checked)}
                               />
                   </th>
@@ -712,6 +752,7 @@ const AlumnosSection = () => {
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Teléfono</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Correo</th>
                             <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Procedencia</th>
+                            <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">Modalidad</th>
                 </tr>
               </thead>
                         <tbody className="divide-y divide-gray-200 bg-white">
@@ -754,6 +795,14 @@ const AlumnosSection = () => {
                                 </a>
                     </td>
                               <td className="px-6 py-4 text-sm text-gray-700">{alumno.procedencia}</td>
+                              <td className="px-6 py-4">
+                                <Badge 
+                                  variant={alumno.modalidad === 'presencial' ? 'default' : 'outline'}
+                                  className="px-3 py-1 rounded-full capitalize"
+                                >
+                                  {alumno.modalidad}
+                                </Badge>
+                              </td>
                   </tr>
                 ))}
               </tbody>

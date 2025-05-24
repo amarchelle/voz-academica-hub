@@ -48,10 +48,10 @@ const LoginScreen = ({ onLogin }: LoginScreenProps) => {
               <img src="/sdv_logo.png" alt="SDV Logo" className="h-32 sm:h-40 lg:h-56 w-auto relative" />
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 lg:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 text-center">
-              Bienvenido a SDV
+              Bienvenido a Servicios de Voz
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 text-center font-medium">
-              Servicios de Voz
+              Panel Administrativo
             </p>
           </div>
         </div>

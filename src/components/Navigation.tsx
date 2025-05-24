@@ -54,7 +54,7 @@ const Navigation = ({ activeSection, setActiveSection, onLogout }: NavigationPro
             <div className="flex items-center space-x-3">
               <img src="/sdv_logo.png" alt="SDV Logo" className="h-10 w-auto" />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">SDV Academy</h1>
+                <h1 className="text-xl font-bold text-gray-900">Servicios de Voz</h1>
                 <p className="text-sm text-gray-600">Panel Administrativo</p>
               </div>
             </div>
@@ -101,7 +101,7 @@ const Navigation = ({ activeSection, setActiveSection, onLogout }: NavigationPro
             <div className="flex items-center space-x-3">
               <img src="/sdv_logo.png" alt="SDV Logo" className="h-8 w-auto" />
               <div>
-                <h1 className="text-lg font-bold text-gray-900">SDV Academy</h1>
+                <h1 className="text-lg font-bold text-gray-900">Servicios de Voz</h1>
                 <p className="text-xs text-gray-600">Panel Administrativo</p>
               </div>
             </div>

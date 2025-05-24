@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import LoginScreen from '@/components/LoginScreen';
 import Navigation from '@/components/Navigation';
@@ -37,16 +38,20 @@ const Index = () => {
         return <AsistenciasSection />;
       case 'lista-maestros':
         return (
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Lista de Maestros</h2>
-            <p className="text-gray-600">Sección en desarrollo...</p>
+          <div className="p-4 sm:p-6 lg:p-8 text-center min-h-screen flex items-center justify-center">
+            <div className="max-w-md mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Lista de Maestros</h2>
+              <p className="text-sm sm:text-base text-gray-600">Sección en desarrollo...</p>
+            </div>
           </div>
         );
       case 'avisos':
         return (
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Avisos</h2>
-            <p className="text-gray-600">Sección en desarrollo...</p>
+          <div className="p-4 sm:p-6 lg:p-8 text-center min-h-screen flex items-center justify-center">
+            <div className="max-w-md mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Avisos</h2>
+              <p className="text-sm sm:text-base text-gray-600">Sección en desarrollo...</p>
+            </div>
           </div>
         );
       default:

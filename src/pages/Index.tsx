@@ -1,11 +1,12 @@
-
 import React, { useState } from 'react';
 import LoginScreen from '@/components/LoginScreen';
 import Navigation from '@/components/Navigation';
 import AlumnosSection from '@/components/AlumnosSection';
 import MensualidadesSection from '@/components/MensualidadesSection';
 import SeminariosSection from '@/components/SeminariosSection';
+import DiplomadosSection from '@/components/DiplomadosSection';
 import PerfilSection from '@/components/PerfilSection';
+import AsistenciasSection from '@/components/AsistenciasSection';
 
 const Index = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,22 +29,12 @@ const Index = () => {
         return <MensualidadesSection />;
       case 'seminarios':
         return <SeminariosSection />;
+      case 'diplomado':
+        return <DiplomadosSection />;
       case 'ver-perfil':
         return <PerfilSection />;
-      case 'diplomado':
-        return (
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Diplomado</h2>
-            <p className="text-gray-600">Sección en desarrollo...</p>
-          </div>
-        );
       case 'asistencias':
-        return (
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Asistencias</h2>
-            <p className="text-gray-600">Sección en desarrollo...</p>
-          </div>
-        );
+        return <AsistenciasSection />;
       case 'lista-maestros':
         return (
           <div className="p-6 text-center">

@@ -135,7 +135,11 @@ const PerfilSection = () => {
             </div>
           </CardContent>
         </Card>
-      </div>
+        </div>
+      <footer className="mt-8 text-center text-gray-600 text-sm">
+        <p>© 2023 Servicios de Voz. Todos los derechos reservados.</p>
+        <p>Fecha: {new Date().toLocaleDateString()}</p>
+      </footer>
     </div>
   );
 };

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
-import { Clock, MapPin, User } from 'lucide-react';
+import { Clock, MapPin, User, GraduationCap } from 'lucide-react';
 
-interface Seminario {
+interface Diplomado {
   id: number;
   dia: string;
   curso: string;
@@ -12,248 +12,244 @@ interface Seminario {
   aula: string;
   docente: string;
   cargo: string;
+  nivel: number;
+  duracion: string;
 }
 
-const SeminariosSection = () => {
-  const [selectedClase, setSelectedClase] = useState<Seminario | null>(null);
+const DiplomadosSection = () => {
+  const [selectedClase, setSelectedClase] = useState<Diplomado | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
-  const seminarios: Seminario[] = [
-    // Horarios de Dir. Armando LeBlohic
+  const diplomados: Diplomado[] = [
+    // Diplomado N4 - Expresión Oral
     {
       id: 1,
       dia: 'Lunes',
-      curso: 'Seminario de Doblaje',
+      curso: 'Diplomado N4 - Expresión Oral',
       horario: '3:00 - 5:00 PM',
-      aula: 'A3',
-      docente: 'Dir. Armando LeBlohic',
-      cargo: 'Director'
+      aula: 'B4',
+      docente: 'Mtra. María González',
+      cargo: 'Profesora',
+      nivel: 4,
+      duracion: '6 meses'
     },
     {
       id: 2,
       dia: 'Martes',
-      curso: 'Seminario de Doblaje',
+      curso: 'Diplomado N4 - Expresión Oral',
       horario: '3:00 - 5:00 PM',
-      aula: 'A3',
-      docente: 'Dir. Armando LeBlohic',
-      cargo: 'Director'
+      aula: 'B4',
+      docente: 'Mtra. María González',
+      cargo: 'Profesora',
+      nivel: 4,
+      duracion: '6 meses'
     },
     {
       id: 3,
       dia: 'Miércoles',
-      curso: 'Seminario de Doblaje',
+      curso: 'Diplomado N4 - Expresión Oral',
       horario: '3:00 - 5:00 PM',
-      aula: 'A3',
-      docente: 'Dir. Armando LeBlohic',
-      cargo: 'Director'
+      aula: 'B4',
+      docente: 'Mtra. María González',
+      cargo: 'Profesora',
+      nivel: 4,
+      duracion: '6 meses'
     },
     {
       id: 4,
       dia: 'Jueves',
-      curso: 'Seminario de Doblaje',
+      curso: 'Diplomado N4 - Expresión Oral',
       horario: '3:00 - 5:00 PM',
-      aula: 'A3',
-      docente: 'Dir. Armando LeBlohic',
-      cargo: 'Director'
-            },
-            {
+      aula: 'B4',
+      docente: 'Mtra. María González',
+      cargo: 'Profesora',
+      nivel: 4,
+      duracion: '6 meses'
+    },
+    {
       id: 5,
       dia: 'Viernes',
-      curso: 'Seminario de Doblaje',
+      curso: 'Diplomado N4 - Expresión Oral',
       horario: '3:00 - 5:00 PM',
-      aula: 'A3',
-      docente: 'Dir. Armando LeBlohic',
-      cargo: 'Director'
+      aula: 'B4',
+      docente: 'Mtra. María González',
+      cargo: 'Profesora',
+      nivel: 4,
+      duracion: '6 meses'
     },
-    // Horarios de Mtra. Ana Martínez
+    // Diplomado N5 - Doblaje
     {
       id: 6,
       dia: 'Lunes',
-      curso: 'Seminario de Locución',
-      horario: '5:30 - 7:30 PM',
-      aula: 'A2',
-      docente: 'Mtra. Ana Martínez',
-      cargo: 'Coordinadora'
-        },
-        {
+      curso: 'Diplomado N5 - Doblaje',
+      horario: '4:00 - 6:00 PM',
+      aula: 'B1',
+      docente: 'Dir. Armando LeBlohic',
+      cargo: 'Director',
+      nivel: 5,
+      duracion: '6 meses'
+    },
+    {
       id: 7,
       dia: 'Martes',
-      curso: 'Seminario de Locución',
-      horario: '5:30 - 7:30 PM',
-      aula: 'A2',
-      docente: 'Mtra. Ana Martínez',
-      cargo: 'Coordinadora'
+      curso: 'Diplomado N5 - Doblaje',
+      horario: '4:00 - 6:00 PM',
+      aula: 'B1',
+      docente: 'Dir. Armando LeBlohic',
+      cargo: 'Director',
+      nivel: 5,
+      duracion: '6 meses'
     },
     {
       id: 8,
       dia: 'Miércoles',
-      curso: 'Seminario de Locución',
-      horario: '5:30 - 7:30 PM',
-      aula: 'A2',
-      docente: 'Mtra. Ana Martínez',
-      cargo: 'Coordinadora'
+      curso: 'Diplomado N5 - Doblaje',
+      horario: '4:00 - 6:00 PM',
+      aula: 'B1',
+      docente: 'Dir. Armando LeBlohic',
+      cargo: 'Director',
+      nivel: 5,
+      duracion: '6 meses'
     },
     {
       id: 9,
       dia: 'Jueves',
-      curso: 'Seminario de Locución',
-      horario: '5:30 - 7:30 PM',
-      aula: 'A2',
-      docente: 'Mtra. Ana Martínez',
-      cargo: 'Coordinadora'
+      curso: 'Diplomado N5 - Doblaje',
+      horario: '4:00 - 6:00 PM',
+      aula: 'B1',
+      docente: 'Dir. Armando LeBlohic',
+      cargo: 'Director',
+      nivel: 5,
+      duracion: '6 meses'
     },
     {
       id: 10,
       dia: 'Viernes',
-      curso: 'Seminario de Locución',
-      horario: '5:30 - 7:30 PM',
-      aula: 'A2',
-      docente: 'Mtra. Ana Martínez',
-      cargo: 'Coordinadora'
+      curso: 'Diplomado N5 - Doblaje',
+      horario: '4:00 - 6:00 PM',
+      aula: 'B1',
+      docente: 'Dir. Armando LeBlohic',
+      cargo: 'Director',
+      nivel: 5,
+      duracion: '6 meses'
     },
-    // Horarios de Dr. Carlos Rodríguez
+    // Diplomado N6 - Locución
     {
       id: 11,
       dia: 'Lunes',
-      curso: 'Seminario de Actuación',
-      horario: '4:00 - 6:00 PM',
-      aula: 'A1',
-      docente: 'Dr. Carlos Rodríguez',
-      cargo: 'Profesor'
+      curso: 'Diplomado N6 - Locución',
+      horario: '6:00 - 8:00 PM',
+      aula: 'B2',
+      docente: 'Mtra. Ana Martínez',
+      cargo: 'Coordinadora',
+      nivel: 6,
+      duracion: '6 meses'
     },
     {
       id: 12,
       dia: 'Martes',
-      curso: 'Seminario de Actuación',
-      horario: '4:00 - 6:00 PM',
-      aula: 'A1',
-      docente: 'Dr. Carlos Rodríguez',
-      cargo: 'Profesor'
+      curso: 'Diplomado N6 - Locución',
+      horario: '6:00 - 8:00 PM',
+      aula: 'B2',
+      docente: 'Mtra. Ana Martínez',
+      cargo: 'Coordinadora',
+      nivel: 6,
+      duracion: '6 meses'
     },
     {
       id: 13,
       dia: 'Miércoles',
-      curso: 'Seminario de Actuación',
-      horario: '4:00 - 6:00 PM',
-      aula: 'A1',
-      docente: 'Dr. Carlos Rodríguez',
-      cargo: 'Profesor'
+      curso: 'Diplomado N6 - Locución',
+      horario: '6:00 - 8:00 PM',
+      aula: 'B2',
+      docente: 'Mtra. Ana Martínez',
+      cargo: 'Coordinadora',
+      nivel: 6,
+      duracion: '6 meses'
     },
     {
       id: 14,
       dia: 'Jueves',
-      curso: 'Seminario de Actuación',
-      horario: '4:00 - 6:00 PM',
-      aula: 'A1',
-      docente: 'Dr. Carlos Rodríguez',
-      cargo: 'Profesor'
-        },
-        {
+      curso: 'Diplomado N6 - Locución',
+      horario: '6:00 - 8:00 PM',
+      aula: 'B2',
+      docente: 'Mtra. Ana Martínez',
+      cargo: 'Coordinadora',
+      nivel: 6,
+      duracion: '6 meses'
+    },
+    {
       id: 15,
       dia: 'Viernes',
-      curso: 'Seminario de Actuación',
-      horario: '4:00 - 6:00 PM',
-      aula: 'A1',
-      docente: 'Dr. Carlos Rodríguez',
-      cargo: 'Profesor'
+      curso: 'Diplomado N6 - Locución',
+      horario: '6:00 - 8:00 PM',
+      aula: 'B2',
+      docente: 'Mtra. Ana Martínez',
+      cargo: 'Coordinadora',
+      nivel: 6,
+      duracion: '6 meses'
     },
-    // Horarios de Mtra. Laura Sánchez
+    // Diplomado N7 - Actuación
     {
       id: 16,
       dia: 'Lunes',
-      curso: 'Seminario de Técnica Vocal',
-      horario: '6:00 - 8:00 PM',
-      aula: 'A4',
-      docente: 'Mtra. Laura Sánchez',
-      cargo: 'Profesora'
-            },
-            {
+      curso: 'Diplomado N7 - Actuación',
+      horario: '5:00 - 7:00 PM',
+      aula: 'B3',
+      docente: 'Dr. Carlos Rodríguez',
+      cargo: 'Profesor',
+      nivel: 7,
+      duracion: '8 meses'
+    },
+    {
       id: 17,
       dia: 'Martes',
-      curso: 'Seminario de Técnica Vocal',
-      horario: '6:00 - 8:00 PM',
-      aula: 'A4',
-      docente: 'Mtra. Laura Sánchez',
-      cargo: 'Profesora'
+      curso: 'Diplomado N7 - Actuación',
+      horario: '5:00 - 7:00 PM',
+      aula: 'B3',
+      docente: 'Dr. Carlos Rodríguez',
+      cargo: 'Profesor',
+      nivel: 7,
+      duracion: '8 meses'
     },
     {
       id: 18,
       dia: 'Miércoles',
-      curso: 'Seminario de Técnica Vocal',
-      horario: '6:00 - 8:00 PM',
-      aula: 'A4',
-      docente: 'Mtra. Laura Sánchez',
-      cargo: 'Profesora'
+      curso: 'Diplomado N7 - Actuación',
+      horario: '5:00 - 7:00 PM',
+      aula: 'B3',
+      docente: 'Dr. Carlos Rodríguez',
+      cargo: 'Profesor',
+      nivel: 7,
+      duracion: '8 meses'
     },
     {
       id: 19,
       dia: 'Jueves',
-      curso: 'Seminario de Técnica Vocal',
-      horario: '6:00 - 8:00 PM',
-      aula: 'A4',
-      docente: 'Mtra. Laura Sánchez',
-      cargo: 'Profesora'
+      curso: 'Diplomado N7 - Actuación',
+      horario: '5:00 - 7:00 PM',
+      aula: 'B3',
+      docente: 'Dr. Carlos Rodríguez',
+      cargo: 'Profesor',
+      nivel: 7,
+      duracion: '8 meses'
     },
     {
       id: 20,
       dia: 'Viernes',
-      curso: 'Seminario de Técnica Vocal',
-      horario: '6:00 - 8:00 PM',
-      aula: 'A4',
-      docente: 'Mtra. Laura Sánchez',
-      cargo: 'Profesora'
-    },
-    // Horarios de Mtro. Juan Pérez
-    {
-      id: 21,
-      dia: 'Lunes',
-      curso: 'Seminario de Improvisación',
-      horario: '7:00 - 9:00 PM',
-      aula: 'A5',
-      docente: 'Mtro. Juan Pérez',
-      cargo: 'Profesor'
-    },
-    {
-      id: 22,
-      dia: 'Martes',
-      curso: 'Seminario de Improvisación',
-      horario: '7:00 - 9:00 PM',
-      aula: 'A5',
-      docente: 'Mtro. Juan Pérez',
-      cargo: 'Profesor'
-        },
-        {
-      id: 23,
-      dia: 'Miércoles',
-      curso: 'Seminario de Improvisación',
-      horario: '7:00 - 9:00 PM',
-      aula: 'A5',
-      docente: 'Mtro. Juan Pérez',
-      cargo: 'Profesor'
-    },
-    {
-      id: 24,
-      dia: 'Jueves',
-      curso: 'Seminario de Improvisación',
-      horario: '7:00 - 9:00 PM',
-      aula: 'A5',
-      docente: 'Mtro. Juan Pérez',
-      cargo: 'Profesor'
-    },
-    {
-      id: 25,
-      dia: 'Viernes',
-      curso: 'Seminario de Improvisación',
-      horario: '7:00 - 9:00 PM',
-      aula: 'A5',
-      docente: 'Mtro. Juan Pérez',
-      cargo: 'Profesor'
-            }
+      curso: 'Diplomado N7 - Actuación',
+      horario: '5:00 - 7:00 PM',
+      aula: 'B3',
+      docente: 'Dr. Carlos Rodríguez',
+      cargo: 'Profesor',
+      nivel: 7,
+      duracion: '8 meses'
+    }
   ];
 
-  const handleClaseClick = (clase: Seminario) => {
+  const handleClaseClick = (clase: Diplomado) => {
     setSelectedClase(clase);
     setIsModalOpen(true);
   };
@@ -264,11 +260,11 @@ const SeminariosSection = () => {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#0f172a]">Calendario de Seminarios</h2>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#0f172a]">Calendario de Diplomados</h2>
               <p className="text-base lg:text-lg text-[#64748b] mt-2">Horarios semanales</p>
             </div>
           </div>
-          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {diasSemana.map((dia) => (
@@ -276,12 +272,12 @@ const SeminariosSection = () => {
               <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white border-b border-blue-500 py-4">
                 <CardTitle className="text-center text-lg lg:text-xl font-medium">
                   {dia}
-                  </CardTitle>
-                </CardHeader>
+                </CardTitle>
+              </CardHeader>
               <CardContent className="p-4 lg:p-5">
                 <div className="space-y-3">
-                  {seminarios
-                    .filter(s => s.dia === dia)
+                  {diplomados
+                    .filter(d => d.dia === dia)
                     .sort((a, b) => a.horario.localeCompare(b.horario))
                     .map((clase) => (
                       <div
@@ -292,26 +288,26 @@ const SeminariosSection = () => {
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-sm lg:text-base text-blue-600 flex items-center">
                             <Clock className="w-4 h-4 mr-2" />
-                          {clase.horario}
+                            {clase.horario}
                           </span>
                           <span className="text-sm lg:text-base text-blue-600 flex items-center">
                             <MapPin className="w-4 h-4 mr-2" />
                             Aula {clase.aula}
                           </span>
-                          </div>
+                        </div>
                         <h4 className="text-base lg:text-lg font-medium text-[#0f172a] mb-2 line-clamp-2">
                           {clase.curso}
                         </h4>
                         <div className="flex items-center text-sm lg:text-base text-[#475569]">
                           <User className="w-4 h-4 mr-2" />
                           <span className="line-clamp-1">{clase.docente}</span>
-                          </div>
+                        </div>
                       </div>
                     ))}
-                    </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Modal de detalles de clase */}
@@ -319,7 +315,7 @@ const SeminariosSection = () => {
           <DialogContent className="sm:max-w-[500px] w-[95%]">
             <DialogHeader>
               <DialogTitle className="text-xl lg:text-2xl font-semibold text-[#0f172a]">
-                Detalles de la Clase
+                Detalles del Diplomado
               </DialogTitle>
             </DialogHeader>
             {selectedClase && (
@@ -350,9 +346,22 @@ const SeminariosSection = () => {
                       </span>
                       <span className="text-[#0f172a]">{selectedClase.aula}</span>
                     </div>
-          </div>
-        </div>
-            </div>
+                    <div className="flex items-center justify-between text-base lg:text-lg">
+                      <span className="text-blue-600 flex items-center">
+                        <GraduationCap className="w-5 h-5 mr-2" />
+                        Nivel
+                      </span>
+                      <span className="text-[#0f172a]">N{selectedClase.nivel}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-base lg:text-lg">
+                      <span className="text-blue-600 flex items-center">
+                        Duración
+                      </span>
+                      <span className="text-[#0f172a]">{selectedClase.duracion}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             )}
           </DialogContent>
         </Dialog>
@@ -361,4 +370,4 @@ const SeminariosSection = () => {
   );
 };
 
-export default SeminariosSection;
+export default DiplomadosSection; 

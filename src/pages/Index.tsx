@@ -1,12 +1,82 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import LoginScreen from '@/components/LoginScreen';
+import Navigation from '@/components/Navigation';
+import AlumnosSection from '@/components/AlumnosSection';
+import MensualidadesSection from '@/components/MensualidadesSection';
+import SeminariosSection from '@/components/SeminariosSection';
+import PerfilSection from '@/components/PerfilSection';
 
 const Index = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [activeSection, setActiveSection] = useState('alumnos');
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setActiveSection('alumnos');
+  };
+
+  const renderActiveSection = () => {
+    switch (activeSection) {
+      case 'alumnos':
+        return <AlumnosSection />;
+      case 'mensualidades':
+        return <MensualidadesSection />;
+      case 'seminarios':
+        return <SeminariosSection />;
+      case 'ver-perfil':
+        return <PerfilSection />;
+      case 'diplomado':
+        return (
+          <div className="p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Diplomado</h2>
+            <p className="text-gray-600">Sección en desarrollo...</p>
+          </div>
+        );
+      case 'asistencias':
+        return (
+          <div className="p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Asistencias</h2>
+            <p className="text-gray-600">Sección en desarrollo...</p>
+          </div>
+        );
+      case 'lista-maestros':
+        return (
+          <div className="p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Lista de Maestros</h2>
+            <p className="text-gray-600">Sección en desarrollo...</p>
+          </div>
+        );
+      case 'avisos':
+        return (
+          <div className="p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Avisos</h2>
+            <p className="text-gray-600">Sección en desarrollo...</p>
+          </div>
+        );
+      default:
+        return <AlumnosSection />;
+    }
+  };
+
+  if (!isLoggedIn) {
+    return <LoginScreen onLogin={handleLogin} />;
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Navigation 
+        activeSection={activeSection} 
+        setActiveSection={setActiveSection}
+        onLogout={handleLogout}
+      />
+      <main className="min-h-screen">
+        {renderActiveSection()}
+      </main>
     </div>
   );
 };

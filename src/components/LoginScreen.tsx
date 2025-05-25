@@ -44,7 +44,7 @@ const LoginScreen = ({ onLogin }: LoginScreenProps) => {
           <div className="h-full flex flex-col justify-center items-center relative">
             <div className="relative mb-12">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-xl opacity-25 animate-pulse"></div>
-              <img src="/sdv_logo.png" alt="SDV Logo" className="h-56 w-auto relative" />
+              <img src="/sdv_logo.png" alt="SDV Logo" className="h-96 w-auto relative" />
             </div>
             <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
               Bienvenido a SDV
@@ -60,7 +60,7 @@ const LoginScreen = ({ onLogin }: LoginScreenProps) => {
           <div className="md:hidden flex justify-center mb-8">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-xl opacity-25 animate-pulse"></div>
-              <img src="/sdv_logo.png" alt="SDV Logo" className="h-32 w-auto relative" />
+              <img src="/sdv_logo.png" alt="SDV Logo" className="h-56 w-auto relative" />
             </div>
           </div>
           

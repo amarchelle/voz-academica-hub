@@ -264,8 +264,8 @@ const SeminariosSection = () => {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#0f172a]">Calendario de Seminarios</h2>
-              <p className="text-base lg:text-lg text-[#64748b] mt-2">Horarios semanales</p>
+              <h2 className="text-3xl font-bold text-gray-800">Calendario de Seminarios</h2>
+              <p className="text-base text-gray-600">Horarios semanales</p>
             </div>
           </div>
           </div>
@@ -274,7 +274,7 @@ const SeminariosSection = () => {
           {diasSemana.map((dia) => (
             <Card key={dia} className="shadow-sm border border-[#e2e8f0] hover:shadow-md transition-shadow h-full">
               <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-500 text-white border-b border-blue-500 py-4">
-                <CardTitle className="text-center text-lg lg:text-xl font-medium">
+                <CardTitle className="text-center text-base lg:text-xl font-medium">
                   {dia}
                   </CardTitle>
                 </CardHeader>

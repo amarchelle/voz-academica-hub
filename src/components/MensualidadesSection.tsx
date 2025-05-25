@@ -1034,6 +1034,15 @@ const MensualidadesSection = () => {
     console.log(`Concepto ${conceptoId} estado cambiado a ${estado} (placeholder)`);
   };
 
+  // Función para obtener las iniciales del nombre
+  const getInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(word => word[0])
+      .join('')
+      .toUpperCase();
+  };
+
   return (
     <div className="p-4 lg:p-6 bg-[#f8fafc] min-h-screen w-full">
       <div className="max-w-full mx-auto">
@@ -1060,7 +1069,7 @@ const MensualidadesSection = () => {
             <CardTitle className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-2">
               <div className="flex items-center space-x-3 md:space-x-4">
                 <Users className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="text-lg md:text-xl">Control de Mensualidades</span>
+                <span className="text-base lg:text-xl">Control de Mensualidades</span>
               </div>
               <div className="flex flex-wrap gap-2 justify-end w-full sm:w-auto">
                 <Input
@@ -1078,7 +1087,7 @@ const MensualidadesSection = () => {
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                REGISTRAR
+                <span className="text-sm font-medium">REGISTRAR</span>
               </Button>
                 <Button
                   size="sm"
@@ -1090,7 +1099,7 @@ const MensualidadesSection = () => {
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                 </svg>
-                EDITAR
+                <span className="text-sm font-medium">Salir</span>
               </Button>
                 <Button
                   size="sm"
@@ -1185,24 +1194,29 @@ const MensualidadesSection = () => {
                               onChange={(e) => handleStudentSelect(item.id, e.target.checked)}
                             />
                     </td>
-                          <td className="px-3 py-2 text-xs font-medium text-gray-900">
-                      {item.nombre}
-                    </td>
-                          <td className="px-3 py-2 text-xs text-gray-700">
-                            <Badge variant={item.curso.includes('Diplomado') ? 'default' : 'secondary'} className="text-xs">
+                          <td className="px-3 py-2 text-sm font-medium text-gray-900">
+                            <div className="flex items-center gap-2">
+                              <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-medium">
+                                {getInitials(item.nombre)}
+                              </div>
+                              {item.nombre}
+                            </div>
+                          </td>
+                          <td className="px-3 py-2 text-sm text-gray-700">
+                            <Badge variant={item.curso.includes('Diplomado') ? 'default' : 'secondary'} className="text-sm">
                         {item.curso}
                       </Badge>
                     </td>
-                          <td className="px-3 py-2 text-xs font-semibold text-gray-900">{item.mensualidad}</td>
+                          <td className="px-3 py-2 text-sm font-semibold text-gray-900">{item.mensualidad}</td>
                     {meses.map(mes => (
                             <td key={mes} className="px-2 py-2 text-center">
                         {item.pagos[mes] === 'PAGADO' && (
-                          <Badge className="bg-green-500 hover:bg-green-600 text-white text-xs">
+                          <Badge className="bg-green-500 hover:bg-green-600 text-white text-sm">
                             PAGADO
                           </Badge>
                         )}
                         {item.pagos[mes] === 'PENDIENTE' && (
-                          <Badge variant="destructive" className="text-xs">
+                          <Badge variant="destructive" className="text-sm">
                             PENDIENTE
                           </Badge>
                         )}

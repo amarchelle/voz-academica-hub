@@ -284,49 +284,50 @@ const AvisosSection = () => {
 
       {/* Modal de Nuevo Aviso */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="sm:max-w-[600px]">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-gray-800">Nuevo Aviso</DialogTitle>
-            <DialogDescription className="text-gray-600 mt-2">
+        <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+          <DialogHeader className="space-y-2">
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-gray-800">Nuevo Aviso</DialogTitle>
+            <DialogDescription className="text-sm sm:text-base text-gray-600">
               Complete el formulario para enviar un mensaje a los docentes
             </DialogDescription>
           </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="titulo">Título del Aviso</Label>
+              <Label htmlFor="titulo" className="text-sm sm:text-base">Título del Aviso</Label>
               <Input
                 id="titulo"
                 value={nuevoAviso.titulo}
                 onChange={(e) => setNuevoAviso(prev => ({ ...prev, titulo: e.target.value }))}
                 placeholder="Ingrese el título del aviso"
+                className="text-sm sm:text-base"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="mensaje">Mensaje</Label>
+              <Label htmlFor="mensaje" className="text-sm sm:text-base">Mensaje</Label>
               <Textarea
                 id="mensaje"
                 value={nuevoAviso.mensaje}
                 onChange={(e) => setNuevoAviso(prev => ({ ...prev, mensaje: e.target.value }))}
                 placeholder="Escriba el mensaje para los docentes"
-                className="min-h-[150px]"
+                className="min-h-[100px] sm:min-h-[150px] text-sm sm:text-base"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <Label>Destinatarios</Label>
+              <Label className="text-sm sm:text-base">Destinatarios</Label>
               <div className="space-y-2">
                 <div className="relative">
                   <Input
                     placeholder="Buscar docentes..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10"
+                    className="pl-10 text-sm sm:text-base"
                   />
                   <svg
-                    className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -339,7 +340,7 @@ const AvisosSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="grid grid-cols-2 gap-2 max-h-[200px] overflow-y-auto p-2 border rounded-lg">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[150px] sm:max-h-[200px] overflow-y-auto p-2 border rounded-lg">
                   {filteredMaestros.map((maestro) => (
                     <div key={maestro.id} className="flex items-center space-x-2">
                       <input
@@ -347,45 +348,50 @@ const AvisosSection = () => {
                         id={`maestro-${maestro.id}`}
                         checked={selectedMaestros.includes(maestro.id.toString())}
                         onChange={() => handleMaestroSelect(maestro.id.toString())}
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4 sm:w-5 sm:h-5"
                       />
-                      <label htmlFor={`maestro-${maestro.id}`} className="text-sm text-gray-700">
+                      <label htmlFor={`maestro-${maestro.id}`} className="text-sm sm:text-base text-gray-700">
                         {maestro.nombre}
                       </label>
                     </div>
                   ))}
                   {filteredMaestros.length === 0 && (
-                    <div className="col-span-2 text-center text-gray-500 py-2">
+                    <div className="col-span-1 sm:col-span-2 text-center text-gray-500 py-2 text-sm sm:text-base">
                       No se encontraron docentes
                     </div>
                   )}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-xs sm:text-sm text-gray-500">
                   {selectedMaestros.length} docente(s) seleccionado(s)
                 </div>
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="fecha">Fecha de Envío</Label>
+              <Label htmlFor="fecha" className="text-sm sm:text-base">Fecha de Envío</Label>
               <Input
                 id="fecha"
                 type="date"
                 value={nuevoAviso.fecha}
                 onChange={(e) => setNuevoAviso(prev => ({ ...prev, fecha: e.target.value }))}
+                className="text-sm sm:text-base"
                 required
               />
             </div>
 
-            <div className="flex justify-end space-x-2">
+            <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-2 pt-2">
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => setIsModalOpen(false)}
+                className="w-full sm:w-auto text-sm sm:text-base"
               >
                 Cancelar
               </Button>
-              <Button type="submit" className="bg-green-600 hover:bg-green-700">
+              <Button 
+                type="submit" 
+                className="bg-green-600 hover:bg-green-700 w-full sm:w-auto text-sm sm:text-base"
+              >
                 Enviar Aviso
               </Button>
             </div>

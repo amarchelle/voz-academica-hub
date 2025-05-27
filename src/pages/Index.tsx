@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import LoginScreen from '@/components/LoginScreen';
 import Navigation from '@/components/Navigation';
@@ -8,6 +7,8 @@ import SeminariosSection from '@/components/SeminariosSection';
 import DiplomadosSection from '@/components/DiplomadosSection';
 import PerfilSection from '@/components/PerfilSection';
 import AsistenciasSection from '@/components/AsistenciasSection';
+import MaestrosSection from '@/components/MaestrosSection';
+import AvisosSection from '@/components/AvisosSection';
 
 const Index = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,23 +38,9 @@ const Index = () => {
       case 'asistencias':
         return <AsistenciasSection />;
       case 'lista-maestros':
-        return (
-          <div className="p-4 sm:p-6 lg:p-8 text-center min-h-screen flex items-center justify-center">
-            <div className="max-w-md mx-auto">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Lista de Maestros</h2>
-              <p className="text-sm sm:text-base text-gray-600">Sección en desarrollo...</p>
-            </div>
-          </div>
-        );
+        return <MaestrosSection />;
       case 'avisos':
-        return (
-          <div className="p-4 sm:p-6 lg:p-8 text-center min-h-screen flex items-center justify-center">
-            <div className="max-w-md mx-auto">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Avisos</h2>
-              <p className="text-sm sm:text-base text-gray-600">Sección en desarrollo...</p>
-            </div>
-          </div>
-        );
+        return <AvisosSection />;
       default:
         return <AlumnosSection />;
     }
